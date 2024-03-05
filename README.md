@@ -28,3 +28,13 @@ http://wurstmeister.github.io/kafka-docker/
 
 `docker-compose -f kafka-docker-compose.yml exec kafka kafka-topics.sh --list --bootstrap-server kafka:9092`
 
+# Usage
+
+* Spin up the kafka cluster
+* Run KafkaProviderApplication
+* Run KafkaConsumerApplication
+* Send http post http://localhost:8080/kafka?message=Test
+
+The provider sends the message to Kafka, and the consumer is listening to the queue.
+
+We will be able to see in the logs when it is sent and when it is received in each service.

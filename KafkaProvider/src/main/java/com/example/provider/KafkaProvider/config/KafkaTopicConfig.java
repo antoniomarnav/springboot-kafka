@@ -12,7 +12,10 @@ import java.util.Map;
 @Configuration
 public class KafkaTopicConfig {
 
-    @Bean
+   /*
+   Example to create new topics
+
+   @Bean
     public NewTopic generateTopic(){
         Map<String, String> configurations = new HashMap<>();
         // DELETE (Delete the message), COMPACT (Keep the most recent message)
@@ -21,10 +24,10 @@ public class KafkaTopicConfig {
         configurations.put(TopicConfig.SEGMENT_BYTES_CONFIG, "1073741824"); // 1 Gb. Maximum segment size, default 1 Gb
         configurations.put(TopicConfig.MAX_MESSAGE_BYTES_CONFIG, "1000012"); // Maximum size of each message, default 1 MB
 
-        return TopicBuilder.name("Generated-Topic-1")
-                .partitions(2)
-                .replicas(2)
+        return TopicBuilder.name("test-topic")
+                .partitions(3)
+                .replicas(1)
                 .configs(configurations)
                 .build();
-    }
+    }*/
 }

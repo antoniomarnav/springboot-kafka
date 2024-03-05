@@ -6,23 +6,25 @@ Example of using Spring Boot with Kafka queues.
 * Install Docker Compose
 
 # Run Kafka
-We will create a multi-node Kafka cluster setup, called kafka-docker-compose.yml
+We will create a Kafka cluster setup, called kafka-docker-compose.yml
 
 Let’s spin up the cluster by using the docker-compose command.
 
-docker compose -f .\kafka-docker-compose.yml up -d
+`docker-compose -f .\kafka-docker-compose.yml up -d`
 
-Stop
+**Stop**
 
-docker compose -f .\kafka-docker-compose.yml stop
+`docker-compose -f .\kafka-docker-compose.yml stop`
 
-the image we use: http://wurstmeister.github.io/kafka-docker/
+**The image we use**
 
-Create new topic:
+http://wurstmeister.github.io/kafka-docker/
 
-docker-compose -f kafka-docker-compose.yml exec kafka kafka-topics.sh --create --topic Topic-2 --partitions 1 --replication-factor 1 --bootstrap-server kafka:9092
+**Create new topic**
 
-List the created topic:
+`docker-compose -f kafka-docker-compose.yml exec kafka kafka-topics.sh --create --topic Topic-2 --partitions 1 --replication-factor 1 --bootstrap-server kafka:9092`
 
-docker-compose -f kafka-docker-compose.yml exec kafka kafka-topics.sh --list --bootstrap-server kafka:9092
+**List the created topic**
+
+`docker-compose -f kafka-docker-compose.yml exec kafka kafka-topics.sh --list --bootstrap-server kafka:9092`
 

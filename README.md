@@ -5,6 +5,11 @@ Example of using Spring Boot with Kafka queues.
 * Install Docker
 * Install Docker Compose
 
+# **Technologies**
+* Java 17
+* SpringBoot 3.2.3
+* Kafka 3.6.1
+
 # Run Kafka
 We will create a Kafka cluster setup, called kafka-docker-compose.yml
 
